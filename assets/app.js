@@ -30,32 +30,43 @@ function melumatGoster(data) {
   const iconUrl = `https://openweathermap.org/img/wn/${weather.icon}@2x.png`;
 
   result.innerHTML = `
-  <div class="giris">
-    <div class="text">
-  <h1> <i class="fa-solid fa-location-dot"></i> ${city}</h1>
-   <p class="temp">${data.main.temp}°C</p>
-    <p>${weather.description}</p>
-     </div>
-      <div class="sect-2">
-  <p>
-    <i class="fa-solid fa-feather"></i> Feels like: <br />
-    ${data.main.feels_like}°C
-  </p>
-  <p>
-    <i class="fa-solid fa-droplet"></i> Humidity: <br />
-    ${data.main.humidity}%
-  </p>
-</div>
- <div class="weather-img">
-  <img src="${iconUrl}" alt="${weather.description}">
- </div>
-  </div>
-  </div>
 
-    <div class="wind">
-    <p> <i class="fa-solid fa-wind"></i> Wind Speed: ${data.wind.speed} m/s</p>
-    <p> <i class="fa-regular fa-compass"></i> Wind Direction: ${data.wind.deg}°</p>
+  <div class="giris">
+  <div class="box-1">
+    <div class="text">
+      <h1><i class="fa-solid fa-location-dot"></i> ${city}</h1>
+      <p class="temp">${data.main.temp}°C</p>
+      <p>${weather.description}</p>
     </div>
+    <div class="weather-img">
+      <img src="${iconUrl}" alt="${weather.description}" />
+    </div>
+  </div>
+  <div class="sect-2">
+    <p>
+      <i class="fa-solid fa-feather"></i> Feels like: <br />
+      ${data.main.feels_like}°C
+    </p>
+    <p>
+      <i class="fa-solid fa-droplet"></i> Humidity: <br />
+      ${data.main.humidity}%
+    </p>
+  </div>
+</div>
+
+<div class="wind">
+  <div class="wind2">
+      <span><i class="fa-solid fa-wind"></i> Wind Speed:</span>
+      <span>${data.wind.speed} m/s</span>
+        </div>
+      
+<div class="number">
+  <span><i class="fa-regular fa-compass"></i> Wind Direction:</span>
+  <span> ${data.wind.deg}°</span>
+</div>
+
+</div>
+
      
   `;
 }
